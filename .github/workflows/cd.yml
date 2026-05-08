@@ -28,6 +28,7 @@ jobs:
         run: |
           mkdir -p release
           cp src/calculator.py release/
+          cp requirements.txt release/
           tar -cvzf calculator-v${{ github.ref_name }}.tar.gz -C release .
 
       - name: Create GitHub Release
